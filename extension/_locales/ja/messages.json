@@ -1,0 +1,35 @@
+{
+    "extensionName": {
+        "message": "Translation Toggler"
+    },
+    "extensionDesc": {
+        "message": "ネイティブアプリを使用して翻訳をトグルします。"
+    },
+    "optionChangeTriggerId": {
+        "message": "トリガー要素のIDを変更する"
+    },
+    "optionTypeKeys": {
+        "message": "Shift+F10を入力させてコンテキストメニューを開く"
+    },
+    "optionRightClick": {
+        "message": "右クリックさせてコンテキストメニューを開く"
+    },
+    "optionGetBarHeight": {
+        "message": "バーの高さを取得する"
+    },
+    "optionSetBarHeight": {
+        "message": "バーの高さを手動で設定する"
+    },
+    "optionBarHeight": {
+        "message": "バーの高さ"
+    },
+    "optionAutoGetBarHeight": {
+        "message": "バーの高さを毎回自動で取得する"
+    },
+    "optionReset": {
+        "message": "設定をリセット"
+    },
+    "failedToGetBarHeight": {
+        "message": "バーの高さの取得に失敗しました。"
+    }
+}

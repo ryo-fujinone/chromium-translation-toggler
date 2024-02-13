@@ -1,0 +1,1 @@
+REG ADD "HKCU\Software\Google\Chrome\NativeMessagingHosts\translation_toggler" /ve /t REG_SZ /d "%~dp0translation_toggler.json" /f

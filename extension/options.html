@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title data-i18n="extensionName"></title>
+        <script src="./options.js" type="module"></script>
+        <link rel="stylesheet" href="./options.css" />
+    </head>
+    <body>
+        <header>
+            <h1 data-i18n="extensionName"></h1>
+        </header>
+
+        <div class="wrapper">
+            <div class="checkbox-textbox-set">
+                <label>
+                    <input
+                        type="checkbox"
+                        id="change-trigger-id"
+                        name="change-trigger-id"
+                    />
+                    <p data-i18n="optionChangeTriggerId"></p>
+                </label>
+                <input
+                    type="text"
+                    id="trigger-id"
+                    placeholder="chromium-translation-toggle-trigger"
+                    value="chromium-translation-toggle-trigger"
+                    class="indent"
+                    size="30"
+                    disabled
+                />
+            </div>
+        </div>
+
+        <div class="wrapper">
+            <div>
+                <label for="type-keys">
+                    <input
+                        type="radio"
+                        id="type-keys"
+                        name="toggler"
+                        value="type-keys"
+                        checked
+                    />
+                    <p data-i18n="optionTypeKeys"></p>
+                </label>
+            </div>
+
+            <div>
+                <label for="right-click">
+                    <input
+                        type="radio"
+                        id="right-click"
+                        name="toggler"
+                        value="right-click"
+                    />
+                    <p data-i18n="optionRightClick"></p>
+                </label>
+
+                <div id="right-click-options" class="indent">
+                    <button
+                        id="get-bar-height"
+                        data-i18n="optionGetBarHeight"
+                    ></button>
+
+                    <div class="checkbox-textbox-set">
+                        <label>
+                            <input
+                                type="checkbox"
+                                id="set-bar-height"
+                                name="set-bar-height"
+                            />
+                            <p data-i18n="optionSetBarHeight"></p>
+                        </label>
+                    </div>
+                    <div id="bar-height-wrapper" class="indent">
+                        <dl>
+                            <dt data-i18n="optionBarHeight"></dt>
+                            <dd>
+                                <input
+                                    type="text"
+                                    id="bar-height"
+                                    placeholder="0"
+                                    value=""
+                                    size="3"
+                                    disabled
+                                />
+                                <span>px</span>
+                            </dd>
+                        </dl>
+                    </div>
+
+                    <label>
+                        <input
+                            type="checkbox"
+                            id="auto-get-bar-height"
+                            name="auto-get-bar-height"
+                        />
+                        <p data-i18n="optionAutoGetBarHeight"></p>
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <div class="button-wrapper">
+            <button id="reset-btn" data-i18n="optionReset"></button>
+        </div>
+        <footer>
+            <span data-i18n="extensionName"></span>
+            <span class="ext-ver"></span>
+        </footer>
+    </body>
+</html>

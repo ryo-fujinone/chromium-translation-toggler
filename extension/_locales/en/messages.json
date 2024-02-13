@@ -1,0 +1,35 @@
+{
+    "extensionName": {
+        "message": "Translation Toggler"
+    },
+    "extensionDesc": {
+        "message": "Toggle page translation using native application."
+    },
+    "optionChangeTriggerId": {
+        "message": "Change the ID of the trigger element"
+    },
+    "optionTypeKeys": {
+        "message": "Have the native app type Shift+F10 to open the context menu"
+    },
+    "optionRightClick": {
+        "message": "Open the context menu by having the native app right-click on page"
+    },
+    "optionGetBarHeight": {
+        "message": "Get bar height"
+    },
+    "optionSetBarHeight": {
+        "message": "Set bar height manually"
+    },
+    "optionBarHeight": {
+        "message": "Bar height"
+    },
+    "optionAutoGetBarHeight": {
+        "message": "Get bar height automatically every time"
+    },
+    "optionReset": {
+        "message": "Reset options"
+    },
+    "failedToGetBarHeight": {
+        "message": "Failed to get bar height"
+    }
+}

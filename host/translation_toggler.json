@@ -1,0 +1,7 @@
+{
+    "name": "translation_toggler",
+    "description": "translation toggler",
+    "path": "translation_toggler.bat",
+    "type": "stdio",
+    "allowed_origins": ["chrome-extension://dkipkbkchmoekbamjimkcdegknbeocji/"]
+}

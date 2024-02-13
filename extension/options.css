@@ -1,0 +1,76 @@
+body {
+    background-color: #CCC;
+    font-size: 15px;
+    margin: 0 auto;
+    width: 600px;
+    visibility: hidden;
+}
+
+header {
+    text-align: center;
+    border-bottom: dashed 1px #000000;
+    margin-bottom: 20px;
+}
+
+.wrapper {
+    padding: 20px 0;
+    border-bottom: dashed 1px #555555;
+}
+
+.wrapper button {
+    margin-left: 4px;
+}
+
+input[type="radio"], input[type="checkbox"] {
+    position: relative;
+    top: 2px;
+}
+
+.checkbox-textbox-set label {
+    display: inline;
+}
+
+.checkbox-textbox-set label p {
+    float: left;
+}
+
+label input {
+    float: left;
+}
+
+label p {
+    margin-top: 2px;
+    margin-bottom: 5px;
+    width: calc(100% - 24px);
+}
+
+.indent {
+    margin-left: 20px;
+}
+
+dl {
+    margin-bottom: 10px;
+}
+
+dl dt {
+    /* width: 180px; */
+    float: left;
+    clear: both;
+}
+
+dl dd input[type="text"] {
+    margin-left: 10px;
+}
+
+.button-wrapper {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+footer {
+    text-align: center;
+    margin-top: 20px;
+    border-top: dashed 1px #000000;
+    padding-top: 15px;
+}
