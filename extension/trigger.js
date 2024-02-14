@@ -46,6 +46,12 @@ const trigger = (elem, options) => {
         }
     }
 
+    if (document.querySelector("link[rel='manifest']")) {
+        message.manifestExists = true;
+    } else {
+        message.manifestExists = false;
+    }
+
     document.activeElement.blur();
     chrome.runtime.sendMessage(message);
 

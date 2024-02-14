@@ -145,6 +145,8 @@ def edge_toggler(json_data):
     else:
         window.type_keys("^{F6}")
         window.type_keys("{F6}{F6}")
+        if json_data["manifestExists"]:
+            window.type_keys("{TAB}")
         window.type_keys("{TAB}{ENTER}")
         if "translated" in json_data and json_data["translated"]:
             pywinauto.keyboard.send_keys("{VK_RIGHT}{ENTER}")
