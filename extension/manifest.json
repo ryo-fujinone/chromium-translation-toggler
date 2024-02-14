@@ -1,7 +1,7 @@
 {
     "manifest_version": 3,
     "name": "Translation Toggler",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "description": "__MSG_extensionDesc__",
     "default_locale": "en",
     "icons": {

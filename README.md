@@ -59,7 +59,13 @@ elem.dataset.x = 300;
 elem.dataset.y = 400;
 ```
 
-Edge の場合に限り、Edge モードを使用してください。Edge は他の Chromium ベースのブラウザとは挙動が異なるため、専用のモードを用意する必要がありました。各ページ上において初回の翻訳は即実行されますが、二回目以降は翻訳メニュー上のコントロールを取得するという実装にしており、2 ～ 3 秒程度掛かる場合があります。
+Edge の場合に限り、Edge モードを使用してください。Edge は他の Chromium ベースのブラウザとは挙動が異なるため、専用のモードを用意する必要がありました。Edge モードの挙動は 4 通りあり、各ページ上において初回の実行では翻訳は必ず即終了します。各ページ上において 2 回目以降の実行では後述の data-translated に true/false を設定しない場合、翻訳メニュー上のコントロールを取得するという実装にしており、2 ～ 3 秒程度掛かる場合があります。data-translated が true の場合、翻訳メニューを開いて Enter を入力するという実装にしています。false の場合、翻訳メニューを開いて右に移動してから Enter を入力するという実装にしています。data-translated が設定されている場合は即終了します。Edge の場合はなるべく data-translated を設定して実行するようにしてください。Edge モード以外では data-translated の値は使用されないので、Edge 以外のブラウザでは data-translated を設定する必要はありません。
+
+```
+elem.dataset.translated = true;
+或いは
+elem.dataset.translated = false;
+```
 
 ## Credits
 

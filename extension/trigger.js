@@ -27,8 +27,7 @@ const trigger = (elem, options) => {
         clientY = parseInt(elem.dataset.y);
     }
 
-    document.activeElement.blur();
-    chrome.runtime.sendMessage({
+    const message = {
         title: document.title,
         mode: options.howToOpen,
         barHeight: options.barHeight,
@@ -36,7 +35,19 @@ const trigger = (elem, options) => {
         clientX,
         clientY,
         translationCount,
-    });
+    };
+
+    if (elem.dataset.translated) {
+        const translated = elem.dataset.translated;
+        if (translated === "true") {
+            message.translated = true;
+        } else if (translated === "false") {
+            message.translated = false;
+        }
+    }
+
+    document.activeElement.blur();
+    chrome.runtime.sendMessage(message);
 
     chrome.runtime.onMessage.addListener(() => {
         document.title = origTitle;

@@ -146,17 +146,22 @@ def edge_toggler(json_data):
         window.type_keys("^{F6}")
         window.type_keys("{F6}{F6}")
         window.type_keys("{TAB}{ENTER}")
-        view4 = window.child_window(
-            auto_id="view_4", control_type="Button", found_index=0
-        )
-        if view4.exists() and view4.class_name() == "MdTextButton":
-            # pywinauto.keyboard.send_keys("{RIGHT}{ENTER}")
-            view4.click_input(button="left")
-        else:
+        if "translated" in json_data and json_data["translated"]:
+            pywinauto.keyboard.send_keys("{VK_RIGHT}{ENTER}")
+        elif "translated" in json_data and not json_data["translated"]:
             pywinauto.keyboard.send_keys("{ENTER}")
-            pywinauto.keyboard.send_keys("{ESC}")
-        time.sleep(1)
-        window.type_keys("{ESC}")
+        else:
+            view4 = window.child_window(
+                auto_id="view_4", control_type="Button", found_index=0
+            )
+            if view4.exists() and view4.class_name() == "MdTextButton":
+                # pywinauto.keyboard.send_keys("{RIGHT}{ENTER}")
+                view4.click_input(button="left")
+            else:
+                pywinauto.keyboard.send_keys("{ENTER}")
+                pywinauto.keyboard.send_keys("{ESC}")
+            time.sleep(1)
+            window.type_keys("{ESC}")
 
     if devtools_is_active:
         window.type_keys("{F12}")
