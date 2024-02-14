@@ -3,5 +3,5 @@
     "description": "translation toggler",
     "path": "translation_toggler.bat",
     "type": "stdio",
-    "allowed_origins": ["chrome-extension://dkipkbkchmoekbamjimkcdegknbeocji/"]
+    "allowed_origins": ["chrome-extension://kpgldcmdjbhclfbdkfiimfphinoijajd/"]
 }

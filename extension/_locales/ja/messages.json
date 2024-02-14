@@ -31,5 +31,8 @@
     },
     "failedToGetBarHeight": {
         "message": "バーの高さの取得に失敗しました。"
+    },
+    "optionEdgeMode": {
+        "message": "Edge モード"
     }
 }

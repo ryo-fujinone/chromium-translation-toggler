@@ -7,7 +7,6 @@ import {
 
 let windowInfo = {};
 
-// 拡張機能のアイコンクリック時にオプションページを開くorタブを切替
 chrome.action.onClicked.addListener((_) => {
     chrome.windows.getAll({ populate: true }).then((windows) => {
         const options_page_url = `chrome-extension://${chrome.runtime.id}/options.html`;

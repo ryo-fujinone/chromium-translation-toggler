@@ -36,6 +36,7 @@ class OptionsPage {
 
     static typeKeysRadioBtn = document.querySelector("#type-keys");
     static rightClickRadioBtn = document.querySelector("#right-click");
+    static edgeModeRadioBtn = document.querySelector("#edge-mode");
 
     static getBarHeightBtn = document.querySelector("#get-bar-height");
     static setBarHeightCheckBox = document.querySelector("#set-bar-height");
@@ -53,7 +54,12 @@ class OptionsPage {
         this.triggerIdTextBox.value = defaultOptions.triggerID;
         this.triggerIdTextBox.disabled = true;
 
-        this.typeKeysRadioBtn.checked = true;
+        if (/Edg\//.test(window.navigator.userAgent)) {
+            this.edgeModeRadioBtn.checked = true;
+        } else {
+            this.typeKeysRadioBtn.checked = true;
+        }
+
         this.setBarHeightCheckBox.checked = false;
         this.barHeightTextBox.value = defaultOptions.barHeight;
         this.barHeightTextBox.disabled = true;
@@ -77,6 +83,9 @@ class OptionsPage {
                 break;
             case "right-click":
                 this.rightClickRadioBtn.checked = true;
+                break;
+            case "edge-mode":
+                this.edgeModeRadioBtn.checked = true;
                 break;
             default:
                 break;
@@ -112,6 +121,9 @@ class OptionsPage {
         });
         this.rightClickRadioBtn.addEventListener("change", (e) => {
             this.options.howToOpen = "right-click";
+        });
+        this.edgeModeRadioBtn.addEventListener("change", (e) => {
+            this.options.howToOpen = "edge-mode";
         });
 
         this.setBarHeightCheckBox.addEventListener("change", (e) => {
@@ -169,12 +181,23 @@ class OptionsPage {
     }
 }
 
+const browserCheck = (optionsPxy) => {
+    if (!optionsPxy.firstTime) {
+        return;
+    }
+    optionsPxy.firstTime = false;
+    if (/Edg\//.test(window.navigator.userAgent)) {
+        optionsPxy.howToOpen = "edge-mode";
+    }
+};
+
 window.onload = async () => {
     setMessages();
     setFooter();
 
     const optionsPxy = await createOptionsProxy();
     console.log(optionsPxy);
+    browserCheck(optionsPxy);
     OptionsPage.options = optionsPxy;
     OptionsPage.restoreOptions();
     OptionsPage.setEventListener();

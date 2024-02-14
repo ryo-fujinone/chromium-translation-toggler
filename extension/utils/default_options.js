@@ -5,6 +5,7 @@ const getDefaultOptions = () => {
         barHeight: 0,
         setBarHeight: false,
         autoGetBarHeight: false,
+        firstTime: true,
     };
 };
 

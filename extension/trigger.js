@@ -1,6 +1,7 @@
 const origTitle = document.title;
 let clientX = 0;
 let clientY = 0;
+let translationCount = 0;
 
 let getFromStorage;
 let getDefaultOptions;
@@ -17,6 +18,7 @@ const createTriggerElement = (triggerID) => {
 const trigger = (elem, options) => {
     const randomStr = Math.random().toString(36).substring(2);
     document.title = origTitle + randomStr;
+    translationCount++;
 
     if (elem.dataset.x && !isNaN(elem.dataset.x)) {
         clientX = parseInt(elem.dataset.x);
@@ -33,6 +35,7 @@ const trigger = (elem, options) => {
         autoGetBarHeight: options.autoGetBarHeight,
         clientX,
         clientY,
+        translationCount,
     });
 
     chrome.runtime.onMessage.addListener(() => {

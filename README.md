@@ -59,6 +59,8 @@ elem.dataset.x = 300;
 elem.dataset.y = 400;
 ```
 
+Edge の場合に限り、Edge モードを使用してください。Edge は他の Chromium ベースのブラウザとは挙動が異なるため、専用のモードを用意する必要がありました。各ページ上において初回の翻訳は即実行されますが、二回目以降は翻訳メニュー上のコントロールを取得するという実装にしており、2 ～ 3 秒程度掛かる場合があります。
+
 ## Credits
 
 -   [icons8](https://icons8.jp/icon/zVj3Xneh9DvR/%E3%82%B0%E3%83%BC%E3%82%B0%E3%83%AB%E7%BF%BB%E8%A8%B3) - アイコン

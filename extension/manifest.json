@@ -1,7 +1,7 @@
 {
     "manifest_version": 3,
     "name": "Translation Toggler",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "__MSG_extensionDesc__",
     "default_locale": "en",
     "icons": {
@@ -28,5 +28,6 @@
     ],
     "options_page": "options.html",
     "action": {},
-    "permissions": ["tabs", "storage", "nativeMessaging"]
+    "permissions": ["tabs", "storage", "nativeMessaging"],
+    "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAhjXfMsezvHwki8eZHlldD2Q3FyPKz00sevX+lcfKjEvPQdrco8OCqQsUxKPCyXl9kNz+sKKHLIgrOF6K5+CVsUoZnKRRaDidq29o5PeFg91/46mNtnHRpLk507ltAYMbveczbjB+Bavh/d4a0V2hnHYGrL+p069W9kcIv6ss2M+BrO1wqrIQLjeJ7z6BE2lbqpubfjkJs0So+mq3AeVtcY97ZZ/fppr1LJfidYlFZcieVGqQlAb7v4N6BnlpXD+YGkoPCckTFmTu/k6O4HTjl/eXdg5S1ddxuFbY1WlQ/imqbyNbsMKUg9poL2f/sSTHl+9ExoLO4YH1ZDGuSz0/mwIDAQAB"
 }
