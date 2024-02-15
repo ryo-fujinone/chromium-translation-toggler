@@ -69,4 +69,4 @@ elem.dataset.translated = true;
 
 ## Credits
 
--   [icons8](https://icons8.jp/icon/zVj3Xneh9DvR/%E3%82%B0%E3%83%BC%E3%82%B0%E3%83%AB%E7%BF%BB%E8%A8%B3) - アイコン
+-   icons8 - [アイコン](https://icons8.jp/icon/KniCOB9YDHbU/%E7%BF%BB%E8%A8%B3%E3%83%86%E3%82%AD%E3%82%B9%E3%83%88)
