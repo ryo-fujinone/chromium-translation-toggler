@@ -109,7 +109,7 @@ def toggler2(json_data):
         barHeight = json_data["barHeight"]
         if json_data["autoGetBarHeight"]:
             barHeight = get_bar_height(json_data["title"])
-        coord_y = coord_y + barHeight + 1
+        coord_y = coord_y + barHeight + 8
 
     # Open context menu
     window.click_input(button="right", coords=(coord_x, coord_y))

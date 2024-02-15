@@ -27,6 +27,9 @@ const trigger = (elem, options) => {
         clientY = parseInt(elem.dataset.y);
     }
 
+    clientX = parseInt(clientX * window.devicePixelRatio);
+    clientY = parseInt(clientY * window.devicePixelRatio);
+
     const message = {
         title: document.title,
         mode: options.howToOpen,
